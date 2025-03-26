@@ -33,7 +33,7 @@ jobs:
     - name: Build Docker Image for ${{ github.ref }}
       run: |
         docker buildx create --use
-        docker buildx build --platform linux/amd64,linux/arm64 --tag my-nodejs-app:${{ github.sha }} --push .
+        docker buildx build --platform linux/amd64,linux/arm64 --tag vansh321/my-nodejs-app:${{ github.sha }} --push .
 
   deploy-dev:
     runs-on: ubuntu-latest
