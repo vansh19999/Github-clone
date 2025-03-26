@@ -1,17 +1,17 @@
 name: CI/CD Pipeline
 
-#on:
+on:
   push:
     branches:
       - main
       - development
-      - integration
-      - staging
       - production
   pull_request:
     branches:
       - main
       - development
+      - production
+
 
 jobs:
   build:
